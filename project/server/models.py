@@ -21,6 +21,10 @@ class User(db.Model):
         ).decode()
         self.registered_on = datetime.datetime.now()
         self.admin = admin
+        
+    #https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database
+    def __repr__(self):
+        return (self.email)  
 
     def encode_auth_token(self, user_id):
         """

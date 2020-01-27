@@ -19,3 +19,5 @@ db = SQLAlchemy(app)
 
 from project.server.auth.views import auth_blueprint
 app.register_blueprint(auth_blueprint)
+from project.server.auth.views2 import auth_blueprint2
+app.register_blueprint(auth_blueprint2)
